@@ -16,7 +16,7 @@
 
 	<body>
 		<nav class="navbar navbar-default">
-			<div class="container-fluid">
+			<div class="container">
 				<!-- Brand and toggle get grouped for better mobile display -->
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -25,12 +25,12 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="http://www.zacharysmith.science">About</a>
+					<a class="navbar-brand" class="active" href="http://www.zacharysmith.science">About</a>
 				</div>
 
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					<ul class="nav navbar-nav navbar-center">
+					<ul class="nav navbar-nav navbar-right">
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Solar Cars<span class="caret"></span></a>
 							<ul class="dropdown-menu" role="menu">
@@ -52,16 +52,69 @@
 			</div><!-- /.container-fluid -->
 		</nav>
 	
-	
-	
-	
 		<div id="container" align="center">
 			<div class="inner">
-						
+			<header>
+				<h1 align="center">Navitas Light Control Unit</h1>
+			</header>
+			<p align="left">
+			The Navitas Light Control Unit (LCU) is an embedded system I designed for Purdue Solar Racing's 9th car, Navitas.
+			The main purpose of this board, as the name implies, was to drive the LEDs on the car.  To cut down on wiring and weight,
+			the LCU was designed to be used as three seperate boards. The front LCU would control headlights and front turn signals. The rear 
+			LCU would control brakelights, backup lights, and rear turnsignals. The mid LCU would be only used during outreach events, to control cabin mood lighting. 
+			Because of the proximity to other auxiliary systems, the LCU also controlled most of the 15V peripherals on the car. 
+			</p>
+				<a	href="images/lcu1.jpg">
+					<img src="images/lcu1.jpg" class="img-responsive"> </img>
+				</a>
+			<p>
+				A PIC32 is a bit overkill for a project like this. We chose this specific micro to be used on all embedded systems 
+				for Navitas, in order to create more uniformity across each board. This allows for easier debugging and for the 
+				programming to be more standardized for all systems on the car. 
+			</p>
+				<a	href="images/lcu2.jpg">
+					<img src="images/lcu2.jpg" class="img-responsive"> </img>
+				</a>
+			<p>
+				This page is also mostly standard across all of Navitas' embedded systems. With our previous car Celeritas, there was
+				too much reinventing the wheel when it came to things like the switching power supply. 
+			</p>	
+				<a	href="images/lcu3.jpg">
+					<img src="images/lcu3.jpg" class="img-responsive"> </img>
+				</a>
+			<p>
+				Here we have the constant current sources for the LED's. When possible, we tried to use the same current source design 
+				for each LED. Reliability is one of the most important aspects in racing. When something breaks down in the car, you don't 
+				want to be digging around for unique only used once parts, or trying to figure out why one design works and not another design.
+				You want things to be as uniform and simple as possible. 
+			</p>
+				<a	href="images/lcu4.jpg">
+					<img src="images/lcu4.jpg" class="img-responsive"> </img>
+				</a>
+			<p>
+				The headlight current source was designed to power two <a href="https://www.youtube.com/watch?v=-3Zvjiipc5M">SST-90's</a>. 
+				These things are crazy bright, and way overkill for just meeting the minimum requirements. Because we do a lot of testing at night 
+				on the car, we needed all our car lights to actually be visible and functional above and beyond Shell Eco-Marathon rules. 
+			</p>
+				<a	href="images/lcu5.jpg">
+					<img src="images/lcu5.jpg" class="img-responsive"> </img>
+				</a>
+				<a	href="images/lcu6.jpg">
+					<img src="images/lcu6.jpg" class="img-responsive"> </img>
+				</a>
+				<a	href="images/lcu7.jpg">
+					<img src="images/lcu7.jpg" class="img-responsive"> </img>
+				</a>
+				<a	href="images/toplayer.PNG">
+					<img src="images/toplayer.PNG" class="img-responsive"> </img>
+				</a>
+				<a	href="images/bottomlayer.PNG">
+					<img src="images/bottomlayer.PNG" class="img-responsive"> </img>
+				</a>
 			</div>
 		</div>
 
-		
+
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
