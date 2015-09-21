@@ -49,7 +49,7 @@
 	</head>
 
 	<body>
-		<nav class="navbar navbar-default">
+		<nav class="navbar navbar-default" role="navigation">
 			<div class="container">
 				<!-- Brand and toggle get grouped for better mobile display -->
 				<div class="navbar-header">
@@ -59,28 +59,32 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" class="active" href="http://www.zacharysmith.science">Zachary Smith</a>
 				</div>
 
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					<ul class="nav navbar-nav navbar-right">
+					<ul class="nav navbar-nav">
+						<li> 
+							<a class="active" href="http://www.zacharysmith.science"><strong>Zachary Smith</strong></a>
+						</li>
+											
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Solar Cars<span class="caret"></span></a>
 							<ul class="dropdown-menu" role="menu">
 								<li><a href="http://www.zacharysmith.science/celeritas">Celeritas</a></li>
 								<li><a href="http://www.zacharysmith.science/navitas">Navitas</a></li>
 							</ul>
+						</li>
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Embedded Systems Projects<span class="caret"></span></a>
 							<ul class="dropdown-menu" role="menu">
 								<li><a href="http://www.zacharysmith.science/celeritas-bms">Battery Monitoring System - Celeritas</a></li>
 								<li><a href="http://www.zacharysmith.science/navitas-lcu">Light Control Unit - Navitas</a></li>
 							</ul>
-						<li><a href="http://www.zacharysmith.science/works-of-navitas">Art</a></li>
-						<li><a href="http://www.zacharysmith.science/resume">Résumé<span class="sr-only">(current)</span></a></li>
-							
 						</li>
+						<li><a href="http://www.zacharysmith.science/works-of-navitas">Art</a></li>
+						<li><a href="http://www.zacharysmith.science/contact">Contact<span class="sr-only">(current)</span></a></li>
+							
 					</ul>
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
@@ -88,23 +92,15 @@
 	
 		<div id="container" align="center">
 			<div class="inner">
-				<a 	href="images/celeritas.PNG"
-					class="fresco"
-					data-fresco-caption=""
-					data-fresco-group="header">
-					<img src="images/celeritas.PNG" class="img-responsive" class="col-sm-12" />
-				</a>
-				
+						
 				<header>
 					<h1 align="center">Navitas LCU</h1>
 					<h3 align="center">Light Control Unit</h3>		
 				</header>
-			</div>
-			
-			<div class="inner">	
+
 				<div align="justify">
 					<p>
-						I designed the Light Control Unit (LCU) for Purdue Solar Racing's 2013 car, Navitas. The LCU was designed to power the lights and control the auxiliary systems in the front and back of the car. The board was made to be flexible, the same hardware design would be used in both the back and front of the car. Constant current sources, controlled via pwm, powered the lights. Auxiliary systems like the windshield wiper, car horn, and sensors were also controlled via this board. Signals were relayed from the driver to the LCU via CAN from the Wheel Controller, but redundant hardware buttons were designed into the board in case the software solution failed during the race. I took the lessons I learned from my first embedded systems project, the Celeritas BPS, to make a much better Navitas LCU. The most notable improvement is in the use of space on the board. The schematics were drawn in OrCAD Capture, and the PCBs were designed in OrCAD Layout. 
+						I designed the Light Control Unit (LCU) for Purdue Solar Racing's 2013 car, Navitas. The LCU was designed to power the lights and control the auxiliary systems in the front and back of the car. The board was made to be flexible, the same hardware design would be used in both the back and front of the car. Constant current sources, controlled via PWM, powered the lights. Auxiliary systems like the windshield wiper, car horn, and sensors were also controlled via this board. Signals were relayed from the driver to the LCU via CAN from the Wheel Controller, but redundant hardware buttons were designed into the board in case the software solution failed during the race. I took the lessons I learned from my first embedded systems project, the Celeritas BPS, to make a much better Navitas LCU. The most notable improvement is in the use of space on the board. The schematics were drawn in OrCAD Capture, and the PCBs were designed in OrCAD Layout. 
 					</p>
 				</div>
 			</div>
@@ -115,19 +111,18 @@
 						<div class="col-sm-3">
 							<a href="images/lcu1.jpg"
 							   class="fresco"
-							   data-fresco-caption="The microcontroller page of the schematic. A lot of the parts, like the microcontroller, were chosen to be uniform with the other systems of the car. This made debugging, fixing, and replacing parts much easier across the whole project. This project was designed to be flexible enough to serve as both the front lights controller and rear lights controller. The mid lights option was to run extra LEDs for events like the homecoming parade."
+							   data-fresco-caption="The microcontroller page of the schematic. A lot of the parts, like the microcontroller, were chosen to be uniform with the other systems of the car. This made debugging, fixing, and replacing parts much easier across the whole project. This project was designed to be flexible enough to serve as both the front lights controller and rear lights controller. The mid-lights option was to run extra LEDs for events like the homecoming parade."
 							   data-fresco-group="unique_name">
-							   <img src="images/lcu1.jpg" class="img-responsive" />
+							   <img src="images/tn_lcu1.jpg" class="img-responsive" />
 							</a>
 						</div>	
 						
 						<div class="col-sm-3">
 							<a href="images/lcu2.jpg"
 							   class="fresco"
-							   data-fresco-caption="The switching power supply was another one of the designs that was made uniform across the car. Instead of designing 5 separate power supplies that use 5 separate chips, its much simpler to have one design used across the car."
+							   data-fresco-caption="The switching power supply was another one of the designs that was made uniform across the car. Instead of designing five separate power supplies that use five separate chips, it’s much simpler to have one design used across the car."
 							   data-fresco-group="unique_name">
-							   <img src="images/lcu2.jpg" class="img-responsive" />
-							   
+							   <img src="images/tn_lcu2.jpg" class="img-responsive" />
 							</a>
 						</div>	
 							
@@ -136,16 +131,16 @@
 							   class="fresco"
 							   data-fresco-caption="The constant current supplies for the turn signals."
 							   data-fresco-group="unique_name">
-							   <img src="images/lcu3.jpg" class="img-responsive" />
+							   <img src="images/tn_lcu3.jpg" class="img-responsive" />
 							</a>
 						</div>	
 						
 						<div class="col-sm-3">
 							<a href="images/lcu4.jpg"
 							   class="fresco"
-							   data-fresco-caption="The headlight current source was designed to run two SST-90 LEDs (up to 2700 lumen, very very bright). The brake light copies the same current source as the turn signals. Where possible it's always best to reuse designs, instead of introducing new places for unexpected problems to occur. It helps reduce the amount of time you spend hunting down problems and fixing things."
+							   data-fresco-caption="The headlight current source was designed to run two SST-90 LEDs (up to 2700 lumens, very very bright). The brake light copies the same current source as the turn signals. Where possible, it's always best to reuse designs, instead of introducing new places for unexpected problems to occur. It helps reduce the amount of time you spend hunting down problems and fixing things."
 							   data-fresco-group="unique_name">
-							   <img src="images/lcu4.jpg" class="img-responsive" />
+							   <img src="images/tn_lcu4.jpg" class="img-responsive" />
 							</a>
 						</div>	
 					</div>
@@ -158,34 +153,34 @@
 							   class="fresco"
 							   data-fresco-caption="Miscellaneous items on the schematic, mostly switches controlling auxiliary systems near the front of the car. One of the things we tried to do, was to use the same value of resistors and capacitors in places where we could. It helps make the project cheaper and easier to keep a stock of all the parts."  
 							   data-fresco-group="unique_name">
-							   <img src="images/lcu5.jpg" class="img-responsive" />
+							   <img src="images/tn_lcu5.jpg" class="img-responsive" />
 							</a>
 						</div>	
 							
 						<div class="col-sm-3">
 							<a href="images/lcu6.jpg"
 							   class="fresco"
-							   data-fresco-caption="The second miscellaneous page is filled with backup switches for the driver controls. When aiming for reliability, redundancy is always a safe bet. For Navitas we stuck an embedded system into the steering wheel, to communicate all the controls via CAN, and reduce wiring needed to run the signals. This was the hardware backup in case the wheel controller failed."
+							   data-fresco-caption="The second miscellaneous page is filled with backup switches for the driver controls. When aiming for reliability, redundancy is always a safe bet. For Navitas, we stuck an embedded system into the steering wheel, to communicate all the controls via CAN, and reduce wiring needed to run the signals. This was the hardware backup in case the wheel controller failed."
 							   data-fresco-group="unique_name">
-							   <img src="images/lcu6.jpg" class="img-responsive" />
+							   <img src="images/tn_lcu6.jpg" class="img-responsive" />
 							</a>
 						</div>	
 			
 						<div class="col-sm-3">
 							<a href="images/lcu7.jpg"
 							   class="fresco"
-							   data-fresco-caption="The sensor schematic page. The analog sensors all used butterworth filters to help eliminate noise. The diodes before the op amps are there to prevent the voltage from straying beyond safe operating range for the op maps and microcontroller. "
+							   data-fresco-caption="The sensor schematic page. The analog sensors all used Butterworth filters to help eliminate noise. The diodes before the op amps are there to prevent the voltage from straying beyond safe operating range for the op maps and microcontroller."
 							   data-fresco-group="unique_name">
-							   <img src="images/lcu7.jpg" class="img-responsive" />
+							   <img src="images/tn_lcu7.jpg" class="img-responsive" />
 							</a>
 						</div>	
 							
 						<div class="col-sm-3">
 							<a href="images/toplayer.PNG"
 							   class="fresco"
-							   data-fresco-caption="The top layer of the PCB. The design for the light controller is incredibly compact, especially compared to my first board, the Celeritas BPS. I hid an easter egg in the board. If you notice there are 3 parts not attached to anything, with the part labels &quot;D3 C0 Y?&quot; as an allusion to the decoy circuit in the Celeritas BPS."
+							   data-fresco-caption="The top layer of the PCB. The design for the light controller is incredibly compact, especially compared to my first board, the Celeritas BPS. I hid an easter egg in the board. If you notice there are three parts not attached to anything, with the part labels &quot;D3 C0 Y?&quot; as an allusion to the decoy circuit in the Celeritas BPS."
 							   data-fresco-group="unique_name">
-							   <img src="images/toplayer.PNG" class="img-responsive" />
+							   <img src="images/tn_toplayer.PNG" class="img-responsive" />
 							</a>
 						</div>	
 					</div>
@@ -196,9 +191,9 @@
 						<div class="col-sm-3">
 							<a href="images/bottomlayer.PNG"
 							   class="fresco"
-							   data-fresco-caption="The bottom layer of the PCB. The most important part of this board, was keeping the high current switching away from any of the data lines. There is no reason to have any of the switching things hanging out right underneath the microcontroller, data buses, or analog senses. "
+							   data-fresco-caption="The bottom layer of the PCB. The most important part of this board, was keeping the high current switching away from any of the data lines. There is no reason to have any of the switching things hanging out right underneath the microcontroller, data buses, or analog senses."
 							   data-fresco-group="unique_name">
-							   <img src="images/bottomlayer.PNG" class="img-responsive" />
+							   <img src="images/tn_bottomlayer.PNG" class="img-responsive" />
 							</a>
 						</div>
 					</div>
@@ -206,8 +201,12 @@
 				</div>
 				
 			</div>
-			
 		
+			<div class="inner">	
+				<footer>
+					<p><a href="http://www.zacharysmith.science/contact">Contact</a> &middot; <a href="#">Press</a></p>
+				</footer>
+			</div>
 		</div>
 
 
